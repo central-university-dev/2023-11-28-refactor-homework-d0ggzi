@@ -28,6 +28,13 @@ def test_rename_class(code_renamer):
     assert res == Path('tests/fixtures/renamed_hangman_class.py').read_text()
 
 
+def test_rename_in_dir():
+    code_renamer = CodeRenamer('tests/fixtures/hangman')
+    res = code_renamer.rename_variable('Hangman', 'FunnyGame')
+
+    assert res == Path('tests/fixtures/renamed_hangman_class.py').read_text()
+
+
 def test_move_class(class_or_func_mover):
     moved_element, old_code_without_element = class_or_func_mover.move('Hangman', 'class')
 

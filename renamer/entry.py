@@ -114,13 +114,3 @@ class ClassOrFuncMover:
 
         return updated_cst
 
-
-if __name__ == "__main__":
-    # renamer = CodeRenamer('hangman')
-    # renamer.rename_variable('start_game', 'run')
-
-    class_mover = ClassOrFuncMover('hangman/hangman.py', 'hangman/hangman_class.py')
-    class_mover.move('Hangman', 'class')
-
-    # func_mover = ClassOrFuncMover('hangman/hangman.py', 'hangman/start_game_func.py')
-    # func_mover.move('start_game', libcst.FunctionDef)
